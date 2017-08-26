@@ -1,0 +1,14 @@
+*.aux
+*.bcf
+*.bbl
+*.blg
+*-blx.bib
+*.fls
+*.log
+*.nav
+*.out
+*.pyg
+*.snm
+*.toc
+*.vrb
+*.xml
