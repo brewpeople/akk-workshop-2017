@@ -4,12 +4,23 @@
 
 \usepackage{ngerman}
 \usepackage{csquotes}
+\usepackage{booktabs}
 
 \title{Der große Bierbrauworkshop}
 \author{foo}
 
 \begin{document}
 \maketitle
+
+
+% http://www.cloneabeer.com/CABebc.php
+\definecolor{ebc4}{RGB}{255, 230, 153}
+\definecolor{ebc8}{RGB}{255, 191, 66}
+\definecolor{ebc12}{RGB}{248, 166, 0}
+\definecolor{ebc20}{RGB}{222, 124, 0}
+\definecolor{ebc35}{RGB}{134, 24, 0}
+\definecolor{ebc61}{RGB}{90, 10, 2}
+\definecolor{ebc79}{RGB}{54, 8, 10}
 
 % \section{Überblick}
 
@@ -61,7 +72,24 @@
   \end{description}
 \end{frame}
 \begin{frame}{Bierfarbe}
-  siehe Tabelle im Hobbybrauer wiki
+  \tikzset{
+    ebc bar/.style={
+      rectangle,
+      minimum width=2cm,
+    }
+  }
+  \begin{table}
+    \begin{tabular}{llll}
+      \textbf{EBC} & \textbf{englisch} & \textbf{deutsch} & \textbf{Farbe}\\
+      \midrule
+      4--8  & pale & hell & \tikz {\node[ebc bar, left color=ebc4, right color=ebc8] {}} \\
+      8--12 & golden, pale & gold & \tikz {\node[ebc bar, left color=ebc8, right color=ebc12] {}} \\
+      12--20 & amber & bernstein & \tikz {\node[ebc bar, left color=ebc12, right color=ebc20] {}} \\
+      20--35 & light brown, copper & kupfer & \tikz {\node[ebc bar, left color=ebc20, right color=ebc35] {}} \\
+      35--60 & brown & braun & \tikz {\node[ebc bar, left color=ebc35, right color=ebc61] {}} \\
+      60+ & dark brown, black & schwarz & \tikz {\node[ebc bar, left color=ebc61, right color=ebc79] {}}
+    \end{tabular}
+  \end{table}
 \end{frame}
 \begin{frame}{Der Brauprozess im Überblick}
   \begin{enumerate}
