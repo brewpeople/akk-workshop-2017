@@ -1,7 +1,6 @@
 ## Folien für den Brauworkshop im AKK
 
-
-Die Präsentation hängt von folgenden Paketen ab:
+Die Präsentation für den [Workshop](https://www.akk.org/workshops/K13.php) hängt von folgenden Paketen ab:
 
 * Metropolis Beamerthema
 * ngerman
