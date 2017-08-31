@@ -1,10 +1,11 @@
-\documentclass[9pt]{beamer}
+\documentclass[9pt, ngerman]{beamer}
 \usetheme[progressbar=frametitle]{metropolis}
 \usecolortheme[snowy]{owl}
 
-\usepackage{ngerman}
+\usepackage{babel}
 \usepackage{csquotes}
 \usepackage{booktabs}
+\usepackage{siunitx}
 
 \title{Der große Bierbrauworkshop}
 \author{foo}
@@ -86,13 +87,40 @@
 \begin{frame}{Geschichtlicher Ursprung}
   Irgendwas mit Ägypten
 \end{frame}
-\begin{frame}{Sauberkeit}
-  Nach dem Hopfenkochen peinlichst drauf achten, die Würze nicht zu infizieren.
-\end{frame}
 \begin{frame}{Das Tagesrezept}
   \begin{itemize}
     \item Pale Ale
   \end{itemize}
+\end{frame}
+\begin{frame}{Zutaten}
+  \begin{itemize}
+    \item Getreidemalze
+    \item Wasser
+    \item Hopfen
+    \item Hefe
+  \end{itemize}
+\end{frame}
+\begin{frame}{Malz}
+  Die Stärke im Malz ist der Ausgangsstoff für den → Zucker der am Ende zu Kohlendioxid und
+  Ethanol vergoren wird. Typische Malzgetreide sind \emph{Gerste} und \emph{Weizen},
+  weit seltener werden \emph{Roggen} und \emph{Dinkel} benutzt.
+
+  Die → Bierfarbe hängt maßgeblich von der Farbe des Malzes ab, die durch
+  Trocknungstemperatur beim → Mälzen festgelegt werden kann.
+\end{frame}
+\begin{frame}{Wasser}
+\end{frame}
+\begin{frame}{Hopfen}
+  Der Hopfen fördert die \emph{Haltbarkeit} und bestimmt die → Bitterkeit eines
+  Bieres.
+\end{frame}
+\begin{frame}{Hefe}
+  Die Hefe führt zur → Vergärung des Zuckers zu Kohlendioxid und Ethanol.
+
+  Alle Hefesorten lassen sich grob in \emph{untergärig} und \emph{obergärige}
+  Hefen einteilen.  Untergärige Hefen benötigen Temperaturen zwischen \SIrange{4
+  }{9}{\celsius}, während obergärige Hefen bereits bei Zimmertemperatur zur
+  Gärung führen.
 \end{frame}
 \begin{frame}{Kennzahlen und -einheiten}
   \begin{block}{Bier}
@@ -227,5 +255,9 @@
     \item Gärfass
   \end{itemize}
 \end{frame}
+
+% \begin{frame}{Sauberkeit}
+%   Nach dem Hopfenkochen peinlichst drauf achten, die Würze nicht zu infizieren.
+% \end{frame}
 
 \end{document}

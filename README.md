@@ -6,6 +6,7 @@ Die Präsentation für den [Workshop](https://www.akk.org/workshops/K13.php) hä
 * ngerman
 * csquotes
 * booktabs
+* siunitx
 
 Um die Folien zu kompilieren,
 
