@@ -11,6 +11,9 @@
   locale = DE
 }
 
+\DeclareSIUnit[number-unit-product = {\SIUnitSymbolDegree}]
+  \dH{\ensuremath{dH}}
+
 \newcommand{\forward}[1]{\textbf{→\,#1}}
 
 \title{Der große Bierbrauworkshop}
@@ -116,6 +119,49 @@
   durch Trocknungstemperatur beim \forward{Mälzen} festgelegt werden kann.
 \end{frame}
 \begin{frame}{Wasser}
+  \begin{block}{pH-Wert}
+    \vspace{0.5em}
+    Enzyme die in der Maische Stärke in Zucker umsetzen, arbeiten optimal bei
+    leicht saurem Millieu und einem pH-Wert von \numrange{5.5}{6.5}.
+  \end{block}
+
+  \begin{block}{Wasserhärte}
+  \end{block}
+
+  Sehr umfangreiche Informationen zum Thema Wasser bietet:
+
+  \url{http://braumagazin.de/article/von-der-wasseranalyse-zum-brauwasser}
+\end{frame}
+\begin{frame}{Wasser und Bierstile}
+  \sisetup{range-phrase = --}
+  \begin{table}
+    \begin{tabular}{lrrr}
+      \textbf{Bierstil} & \textbf{Restalkalität \si{\dH}} & \textbf{Calcium
+      \si{\milli\gram\per\liter}} & \textbf{Magnesium \si{\milli\gram\per\liter}}\\
+      \midrule
+      Helles    & \numrange{-3}{0} & \numrange{30}{50}  & \numrange{0}{20} \\
+      Pils      & \numrange{-5}{0} & \numrange{0}{75}   & \numrange{0}{20} \\
+      Bock      & \numrange{5}{10} & \numrange{50}{75}  & \numrange{0}{20} \\
+      Weizen    & \numrange{5}{10} & \numrange{50}{100} & \numrange{0}{20}
+    \end{tabular}
+  \end{table}
+\end{frame}
+\begin{frame}{Wasser in Karlsruhe}
+  \begin{block}{Werte der Stadtwerke Karlsruhe}
+    \vspace{0.5em}
+    pH-Wert von \num{7.1}
+
+    Karbonathärte \SI{14.8}{\dH}, Calciumhärte von
+    $\SI{112}{\milli\gram\per\liter} / 7,14 =$ \SI{15.7}{\dH} und
+    Magnesiumhärte von $\SI{9.5}{\milli\gram\per\liter} / 4,34 =$
+    \SI{2.2}{\dH}.
+  \end{block}
+
+  \begin{block}{Geeignete Biere}
+    \vspace{0.5em}
+    Mit der Restalkalität von \SI{10}{\dH} könnten ohne Wasserbehandlung nur
+    \textbf{Weizen-} und \textbf{dunkle Biere} ihr volles Aroma entwickeln.
+  \end{block}
 \end{frame}
 \begin{frame}{Hopfen}
   Der Hopfen fördert die \emph{Haltbarkeit} und bestimmt die
