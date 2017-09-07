@@ -6,6 +6,7 @@
 \usepackage{csquotes}
 \usepackage{booktabs}
 \usepackage{siunitx}
+\usepackage{mhchem}
 
 \sisetup{
   locale = DE
@@ -15,6 +16,7 @@
   \dH{\ensuremath{dH}}
 
 \newcommand{\forward}[1]{\textbf{→\,#1}}
+\newcommand{\chem}[1]{\ensuremath{\mathrm{#1}}}
 
 \title{Der große Bierbrauworkshop}
 \author{foo}
@@ -70,9 +72,9 @@
       Bierwürze nur \textbf{vor Beginn oder während der Dauer} des Würzekochens
       beigegeben werden.
 
-    \item[6.] Als Klärmittel für Würze und Bier dürfen nur solche Stoffe
-      verwendet werden, die mechanisch oder adsorbierend wirken und bis auf
-      gesundheitlich, geruchlich und geschmacklich unbedenkliche, technisch
+    \item[6.] Als \textbf{Klärmittel} für Würze und Bier dürfen nur solche
+      Stoffe verwendet werden, die mechanisch oder adsorbierend wirken und bis
+      auf gesundheitlich, geruchlich und geschmacklich unbedenkliche, technisch
       unvermeidbare Anteile wieder ausgeschieden werden.
   \end{enumerate}
 \end{frame}
@@ -255,53 +257,144 @@
   \end{table}
 \end{frame}
 
-\section{Brauen}
+\section{Der Brauprozess}
 
-\begin{frame}{Der Brauprozess im Überblick}
-  \begin{enumerate}
-    \item Mälzen und Schroten
-    \item Einmaischen und Rasten \enquote{fahren}
-    \item Läutern
-    \item Hopfen kochen und Würzeklärung
-    \item Vergärung und Lagerung
-  \end{enumerate}
+\begin{frame}{Überblick}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-ueberblick.pdf}
+  \end{center}
 \end{frame}
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{cc0/gerste-pexels-photo-326082}}
-\begin{frame}{Mälzen von Getreide}
-  \begin{enumerate}
-    \item \emph{Einweichen} der Gerste, Wassergehalt steigt von 12\% auf 42\%
-    \item \emph{Keimung} und Abbau von Stärke und Eiweiß in Zucker und Aminosäuren
-    \item Ende der Umsetzung durch \emph{Darren} (Trocknung) des Keims
-    \item \emph{Schroten} statt vollständiges Mahlen erhält Spelze
-  \end{enumerate}
-\end{frame}
-}
 \begin{frame}{Maischen}
-  \begin{enumerate}
-    \item Aufweichen des Malzes bei \emph{Einmaischtemperatur}
-    \item Umwandlung der Stärke bei verschiedenen \emph{Rasttemperaturen}
-  \end{enumerate}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-maischen.pdf}
+  \end{center}
 \end{frame}
-\begin{frame}{Läutern}
-  \begin{enumerate}
-    \item Trennung des Korns und Eiweißes von der \emph{Würze}
-  \end{enumerate}
-\end{frame}
-\begin{frame}{Hopfen}
-  \begin{enumerate}
-    \item Erhitzen der Würze bis auf Kochtemperatur
-    \item Zugabe des \emph{Bitterhopfens}
-    \item Zugabe des \emph{Aromahopfens} zum Ende
-    \item Trennung der Würze vom Hopfen (z.B. mit \emph{Whirlpool})
-  \end{enumerate}
-  \begin{block}{Warum?}
-    \begin{itemize}
-      \item Aroma
-      \item Haltbarkeit
-    \end{itemize}
+\begin{frame}{Maischen}
+  \begin{block}{Zweck}
+    \vspace{0.5em}
+
+    Abbau der Stärke im Malz durch Enzyme wie \textbeta-Amylase zu
+    \emph{vergärbarer Maltose} und \textalpha-Amylase zu \emph{unvergärbaren
+    Dextrinen}.
+
+  \end{block}
+
+  \begin{block}{Ablauf}
+    \begin{enumerate}
+      \item Zugabe der Schüttung zum Wasser bei \emph{Einmaischtemperatur}
+      \item \emph{Maltoserast} bei etwa \SI{62}{\degree\celsius}, Zerstörung der
+        \textbeta-Amylase ab \SI{65}{\degree\celsius}
+      \item \emph{Verzuckerungsrast} bei etwa \SI{73}{\degree\celsius},
+        Zerstörung der \textalpha-Amylase ab \SI{80}{\degree\celsius}
+    \end{enumerate}
   \end{block}
 \end{frame}
+\begin{frame}{Läutern}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-laeutern.pdf}
+  \end{center}
+\end{frame}
+\begin{frame}{Läutern}
+  \begin{block}{Zweck}
+    \vspace{0.5em}
+
+    Trennung der wässrigen Lösung (\emph{Würze}) von den ungelösten Feststoffen
+    (\emph{Treber}), wozu die Filtrationseigenschaft des Trebers im
+    \emph{Hauptguss} genutzt wird. Zur optimalen Ausbeute werden im
+    \emph{Nachguss} Restzucker aus dem Treber gelöst.
+
+  \end{block}
+
+  \begin{block}{Ablauf}
+    \begin{enumerate}
+      \item Umfüllung der Maische in den \emph{Läuterbottich}
+      \item \emph{Läuterruhe} zum Absetzen des Trebers
+      \item Rückführung der Würze in den Läuterbottich bis sie aufklart
+      \item Ableiten der klaren Würze in den Braukessel
+      \item \emph{Anschwänzen} des Trebers mit \SIrange{75}{80}{\degree\celsius}
+        vorgewärmtem Nachguss
+    \end{enumerate}
+  \end{block}
+\end{frame}
+\begin{frame}{Hopfenkochen}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-hopfenkochen.pdf}
+  \end{center}
+\end{frame}
+\begin{frame}{Hopfenkochen}
+  \begin{block}{Zweck}
+    \vspace{0.5em}
+
+    Das Kochen hilft bei der Einstellung der endgültigen Würzekonzentration
+    durch Verdunstung, zerstört Enzyme und Mikroorganismen, lässt unerwünschte
+    Eiweiße gerinnen und löst Bitterstoffe des Hopfens in der Würze.
+
+  \end{block}
+
+  \begin{block}{Ablauf}
+    \begin{enumerate}
+      \item Erhitzen bis die Würze kocht
+      \item Zugabe des \emph{Bitterhopfens}
+      \item Zugabe des \emph{Aromahopfens} zum Ende
+    \end{enumerate}
+  \end{block}
+\end{frame}
+\begin{frame}{Hopfenseihen und Ausschlagen}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-ausschlagen.pdf}
+  \end{center}
+\end{frame}
+\begin{frame}{Hopfenseihen und Ausschlagen}
+  \begin{block}{Zweck}
+    \vspace{0.5em}
+
+    Trennung der Würze vom Hopfen, geronnenen Eiweißen und anderen
+    Reststoffen. Verschiedene Methoden führen zum Ziel, allerdings ist die
+    Erzeugung eines \emph{Trubkegels} durch einen \emph{Whirlpool} einfach und
+    effizient. Eine schnelle Abkühlung ist erforderlich um die
+    \emph{Nachisomesierung} zu reduzieren und schnell mit der \forward{Gärung}
+    zu beginnen.
+
+  \end{block}
+
+  \begin{block}{Ablauf}
+    \begin{enumerate}
+      \item Rühren der heißen Würze bis ein Strudel entsteht
+      \item Pausieren bis der Strudel sich beruhigt hat
+      \item Ablaufenlassen der Würze und dabei eventuell Nachfiltern
+    \end{enumerate}
+  \end{block}
+\end{frame}
+\begin{frame}{Gärung}
+  \begin{center}
+    \vspace{0.5cm}
+    \includegraphics[width=\textwidth]{pdfs/prozess-gaerung.pdf}
+  \end{center}
+\end{frame}
+\begin{frame}{Gärung}
+  \begin{block}{Zweck}
+    \vspace{0.5em}
+
+    Umwandlung der löslichen Zucker durch Hefe in Alkohol und \ce{CO2}.
+
+  \end{block}
+
+  \begin{block}{Ablauf}
+    \begin{enumerate}
+      \item Zieltemperatur in Abhängigkeit der Hefe einstellen
+      \item Gegebenenfalls die Hefe \enquote{starten}
+      \item Hefe der Würze zugeben und warten \dots
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\section{Tipps}
+
 \begin{frame}{Minimalausstattung}
   \begin{itemize}
     \item Gefäß zum Kochen
@@ -313,5 +406,17 @@
 % \begin{frame}{Sauberkeit}
 %   Nach dem Hopfenkochen peinlichst drauf achten, die Würze nicht zu infizieren.
 % \end{frame}
+
+% {
+% \usebackgroundtemplate{\includegraphics[width=\paperwidth]{cc0/gerste-pexels-photo-326082}}
+% \begin{frame}{Mälzen von Getreide}
+%   \begin{enumerate}
+%     \item \emph{Einweichen} der Gerste, Wassergehalt steigt von 12\% auf 42\%
+%     \item \emph{Keimung} und Abbau von Stärke und Eiweiß in Zucker und Aminosäuren
+%     \item Ende der Umsetzung durch \emph{Darren} (Trocknung) des Keims
+%     \item \emph{Schroten} statt vollständiges Mahlen erhält Spelze
+%   \end{enumerate}
+% \end{frame}
+% }
 
 \end{document}
