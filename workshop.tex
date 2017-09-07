@@ -8,6 +8,8 @@
 \usepackage{siunitx}
 \usepackage{mhchem}
 
+\usetikzlibrary{positioning}
+
 \sisetup{
   locale = DE
 }
@@ -103,13 +105,36 @@
     \item Pale Ale
   \end{itemize}
 \end{frame}
+
+\section{Bierzutaten und -eigenschaften}
+
 \begin{frame}{Zutaten}
-  \begin{itemize}
-    \item Getreidemalze
-    \item Wasser
-    \item Hopfen
-    \item Hefe
-  \end{itemize}
+  \begin{center}
+    \vspace{2em}
+    \begin{tikzpicture}[
+        caption/.style={
+          font=\bfseries,
+        },
+        cc-caption/.style={
+          black!50,
+          font=\tiny,
+          anchor=north, yshift=2mm,
+        },
+    ]
+      \node[] (malt) {\includegraphics[width=2.5cm]{cc0/wikipedia-crystal-malt}};    % 405x720
+      \node[right=1mm of malt]  (water) {\includegraphics[width=2.5cm]{cc0/splashing-splash-aqua-water-pexels-photo-67843}};
+      \node[right=1mm of water] (hops)  {\includegraphics[width=2.5cm]{cc-sa/wikipedia-hops.jpg}};
+      \node[right=1mm of hops]  (yeast) {\includegraphics[width=2.5cm]{cc-sa/wikipedia-saccharomyces-cerevisiae.jpg}};
+
+      \node[below=1mm of malt, caption]   {Getreidemalze\strut};
+      \node[below=1mm of water, caption]  {Wasser\strut};
+      \node[below=1mm of hops, caption]   {Hopfen\strut};
+      \node[below=1mm of yeast, caption]  {Hefe\strut};
+
+      \node[cc-caption] (hops-attr) at (hops.south)     {CC-BY-SA 4.0/Lazaregagnidze};
+      \node[cc-caption] (yeast-attr) at (yeast.south)   {CC-BY-SA 4.0/A doubt};
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 \begin{frame}{Malz}
   Die Stärke im Malz ist der Ausgangsstoff für den \forward{Zucker} der am Ende
