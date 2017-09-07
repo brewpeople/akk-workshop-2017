@@ -2,11 +2,12 @@
 
 Die Präsentation für den [Workshop](https://www.akk.org/workshops/K13.php) hängt von folgenden Paketen ab:
 
-* Metropolis Beamerthema
+* [Metropolis Thema](https://github.com/matze/mtheme)
 * ngerman
 * csquotes
 * booktabs
 * siunitx
+* mhchem
 
 Um die Folien zu kompilieren,
 
