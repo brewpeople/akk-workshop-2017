@@ -1,4 +1,5 @@
 workshop.pdf
+*.synctex.gz
 *.aux
 *.bcf
 *.bbl
