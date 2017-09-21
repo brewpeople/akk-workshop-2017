@@ -16,10 +16,10 @@
   locale = DE
 }
 
-\DeclareSIUnit[number-unit-product = {\SIUnitSymbolDegree}]
-  \dH{\ensuremath{dH}}
-\DeclareSIUnit[number-unit-product = {\SIUnitSymbolDegree}]
-  \dP{\ensuremath{P}}
+\DeclareSIUnit
+  \dH{{}^{\circ} dH}  % why the heck does SIUnitSymbolDegree not work?
+\DeclareSIUnit[number-unit-product=\,]
+  \dP{{}^{\circ} P}
 \DeclareSIUnit[number-unit-product = {\%}]
   \volP{\,vol}
 
@@ -287,8 +287,9 @@
 \begin{frame}{Stammwürze}
 
   Der Stammwürzegehalt ist der Anteil der aus Malz und Hopfen im Wasser gelösten
-  Stoffe (Extrakt), wird in Grad Plato  angegeben und entspricht der Massendichte
-  einer wässerigen Saccharoselösung mit einem Gewichtsprozent Saccharose.
+  Stoffe (Extrakt), wird in Grad Plato (\si{\dP})  angegeben und entspricht der
+  Massendichte einer wässerigen Saccharoselösung mit einem Gewichtsprozent
+  Saccharose.
 
   \begin{block}{Messung}
     Der Wert wird über die Bierspindel oder einem Refraktometer ermittelt.
